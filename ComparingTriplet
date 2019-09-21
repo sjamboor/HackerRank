@@ -1,0 +1,33 @@
+// https://www.hackerrank.com/challenges/compare-the-triplets
+#include <stdio.h>
+
+int main() {
+  static int a[3];
+  static int b[3];
+   
+   int i;
+   int a_count=0;
+   int b_count=0;
+   for(i=0;i<3;i++)
+      scanf("%d",&a[i]);
+   for(i=0;i<3;i++)
+      scanf("%d",&b[i]);
+   
+   for (i=0;i<3;i++)
+   {
+       if(a[i]>b[i])
+       {
+       a_count=a_count+1;
+       }
+       if(a[i]<b[i])
+       {
+           b_count=b_count+1;
+       }
+       if (a[i]==b[i])
+       {
+           continue;
+       }
+       
+   }
+   printf("alice:bob %d:%d", a_count, b_count);
+}
