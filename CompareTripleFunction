@@ -1,0 +1,30 @@
+//only compartTriplet function from hackerrank compart triplet problem in C
+
+int* compareTriplets(int a_count, int* a, int b_count, int* b, int* result_count) {   
+static int alice[3];
+static int bob[3];
+static int AB[2];
+*result_count=2;
+
+ int acount=0;
+ int bcount=0;
+ int i;
+ for (i=0;i<3;i++)
+   {
+       if(a[i]>b[i])
+       {
+       acount=acount+1;
+       }
+       if(a[i]<b[i])
+       {
+           bcount=bcount+1;
+       }
+       if (a[i]==b[i])
+       {
+           continue;
+       }
+   }
+     AB[0]=acount;
+     AB[1]=bcount;
+return AB;
+}
