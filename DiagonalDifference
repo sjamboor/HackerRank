@@ -1,0 +1,28 @@
+//ONLY diagonalDifference FUNCTION FROM HANKERANK DiagonalDiffrence problem
+
+int diagonalDifference(int arr_rows, int arr_columns, int** arr) {
+int sumDiagonalL = 0;
+int sumDiagonalR = 0;
+int difference = 0;
+int SIZE = arr_rows;
+int i,j;
+for ( i=0;i< arr_rows; i++)
+  for ( j=0; j< arr_columns; j++)
+     scanf("%d",&arr[i][j]);
+
+     for (i =0;i<arr_rows;i++)
+       for (j=0;j<arr_columns;j++)
+     {
+       if (i==j)
+       sumDiagonalL= sumDiagonalL+arr[i][j];
+     }
+     for (i =0;i<arr_rows;i++)
+       for (j=0;j<arr_columns;j++)
+        if(i+j==(SIZE-1))   //minor of diagonal i+j=N-1
+        {
+         sumDiagonalR = sumDiagonalR+arr[i][j];  
+        }
+     difference = abs(sumDiagonalL-sumDiagonalR);
+     return difference;
+
+}
