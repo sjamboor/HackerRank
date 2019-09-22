@@ -1,0 +1,19 @@
+// staircase function only from HACKERRANK STAIRCASE PROBLEM.
+void staircase(int n) {
+
+scanf("%d",n);
+int i=n-1;
+int j=1;
+ while(i!=-1)
+ {
+   while(j<=n)
+    {
+      for (int x=0;x<i;x++) putchar(' ');
+      for (int y=0;y<j;y++) putchar('#');
+      printf("\n");
+      j++;
+      i--;
+    } 
+ }
+    return 0;
+}
