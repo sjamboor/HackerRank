@@ -1,0 +1,10 @@
+// only the aVeryBigSum function below from hackerrank A Very Big Sum problem
+long aVeryBigSum(int ar_count, long* ar) {
+    long long int sum=0;
+    for (int i=0;i<ar_count;i++)
+    {
+        sum=sum+ar[i];
+    }
+return sum;
+
+}
